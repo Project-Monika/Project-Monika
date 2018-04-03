@@ -1582,6 +1582,7 @@ default persistent.menu_bg_m = None
 default persistent.first_load = None
 default persistent.Outfit = "School"
 default persistent.UnlockedOutfits = [False,False,False,False,False,False]
+default persistent.FirstRun = True
 ###### Other global variables ######
 # It's good practice to define global variables here, just so you know what you can call later
 

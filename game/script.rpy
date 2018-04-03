@@ -21,7 +21,7 @@ label start:
     $ n_name = "Natsuki"
     $ y_name = "Yuri"
     $ a_name = "Amy"
-    $ persistent.Outfit = "RedWhite"
+    
     
     
     $ quick_menu = True
@@ -32,6 +32,10 @@ label start:
     #This section detemines the "Act Structure" for the game.
     # persistent.playthrough variable marks each of the major game events (Sayori hanging, etc.)
     #Here is an example of how you might do that
+    if persistent.FirstRun:
+         call import_ddlc_persistent
+         call IntroAct1
+    
     if persistent.playthrough == 0:
         #Call example script
         call Space_Room
@@ -43,6 +47,7 @@ label start:
         pass
 
     return
+
 
 label endgame(pause_length=4.0):
     $ quick_menu = False
